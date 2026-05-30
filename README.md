@@ -73,11 +73,17 @@ The purpose of this repository is to demonstrate how a traditional forecasting a
 
 ## Screenshots
 
-Screenshots of the Streamlit interface, forecast output, scenario stress testing, and AI operational decision summary can be added here.
+### Guardrail Validation Example
 
-```markdown
-![Guardrail validation example](images/guardrail-validation-screenshot.png)
+![Guardrail Validation Example](images/guardrail-validation-screenshot.png)
+
+The application rejects unrealistic scenario inputs before running the forecast.
+
+### AI Operational Decision Summary
+
 ![AI Operational Decision Summary](images/ai-operational-decision-summary.png)
+
+This screenshot shows the application generating a business-facing operational summary using forecast output, staffing logic, risk assessment, estimated labor cost impact, RAG context, and operational memory.
 ![AI Operational Decision Summary](images/ai-operational-decision-summary.png)
 ```
 
