@@ -91,7 +91,6 @@ The purpose of this repository is to demonstrate how a traditional forecasting a
 
 - Portfolio page for the original base project: https://draculess99.github.io/VET-VTO-Forecasting/
 - Original base GitHub repository: https://github.com/draculess99/VET-VTO-Forecasting
-- Advanced agentic AI repository: https://github.com/draculess99/Agentic-VET-VTO-Workforce-Forecasting
 
 ---
 
