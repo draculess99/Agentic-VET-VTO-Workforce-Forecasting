@@ -14,6 +14,20 @@ The original base project focused on forecasting workload and generating VET/VTO
 
 ---
 
+## Technology Stack
+
+This project uses a multi-agent AI, machine learning, forecasting, and deployment stack.
+
+**Core Stack:** Python, Pandas, NumPy, Scikit-learn, XGBoost, Streamlit, Flask.
+
+**AI / Agentic Stack:** Multi-Agent AI workflow, CrewAI-style agent structure, LangGraph-style node architecture, RAG-ready knowledge retrieval layer, guardrail-based recommendation logic, scenario validation, and AI-assisted decision explanations.
+
+**Analytics / Forecasting:** Time series forecasting, recursive forecasting, feature engineering, baseline model comparison, forecast error analysis, cost impact estimation, and workforce staffing signal generation.
+
+**Decision Support:** Forecast Agent, Staffing Decision Agent, Risk Assessment Agent, Cost Analysis Agent, RAG Agent, Executive Summary Agent, Memory Node, and Guardrail Node.
+
+---
+
 ## Business Problem
 
 Warehouse operations teams must often make staffing decisions under uncertainty.
