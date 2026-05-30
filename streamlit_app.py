@@ -1447,7 +1447,7 @@ if run_clicked:
         st.subheader("AI Decision Workflow Architecture")
         
         st.info(
-            "LangGraph workflow active: Forecast Node → Staffing Node → Cost Node → RAG Context Node → Executive Summary Node → Operational Memory"
+            "LangGraph workflow active: Forecast Node -> Staffing Node -> Risk Node -> Cost Node -> RAG Context Node -> Executive Summary Node -> Operational Memory"
         )
 
     else:
