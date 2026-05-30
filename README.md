@@ -45,6 +45,58 @@ The system is designed to:
 * Provide an AI-assisted decision-support layer for operations leaders
 
 ---
+## Base Project vs Advanced Version
+
+This repository is the advanced agentic AI extension of the original VET/VTO workforce forecasting project.
+
+The base version focused on machine learning forecasting, dashboarding, deployment, and labor cost analysis.
+
+This advanced version adds:
+
+- Multi-agent reasoning
+- CrewAI-style agent/task structure
+- LangGraph-style operational workflow
+- Guardrail-based decision checks
+- RAG-style operational context
+- Executive-level AI summaries
+- Scenario stress testing
+
+The purpose of this repository is to demonstrate how a traditional forecasting application can evolve into an AI-assisted operations decision-support system.
+
+### Related Links
+
+- Portfolio page for the original base project: https://draculess99.github.io/VET-VTO-Forecasting/
+- Original base GitHub repository: https://github.com/draculess99/VET-VTO-Forecasting
+- Advanced agentic AI repository: https://github.com/draculess99/Agentic-VET-VTO-Workforce-Forecasting
+
+---
+
+## Screenshots
+
+Screenshots of the Streamlit interface, forecast output, scenario stress testing, and AI operational decision summary can be added here.
+
+```markdown
+![Application Screenshot](images/app_screenshot.png)
+![Application Screenshot](images/app_screenshot.png)
+![Application Screenshot](images/app_screenshot.png)
+```
+
+---
+## Model and Data
+
+The forecasting layer uses historical workload and demand-related data to generate future workload estimates.
+
+The project includes:
+
+- Historical training data
+- Store and feature data
+- Saved model artifact
+- Scenario templates for stress testing
+- Cost and staffing assumptions
+
+The saved model is stored in the `models/` directory and is used by the application to generate forecast-driven labor planning recommendations.
+
+---
 
 ## Agentic AI Architecture
 
@@ -73,6 +125,7 @@ Summarizes the forecast, staffing recommendation, risk level, and business impac
 Checks whether staffing recommendations are operationally reasonable and avoids unrealistic or unsafe recommendations.
 
 ---
+
 ## System Architecture
 
 ```mermaid
@@ -102,6 +155,8 @@ flowchart LR
 
     Guardrails --> Output[Safe VET/VTO Recommendation]
 ```
+
+---
 
 ## Workflow Logic
 
@@ -180,7 +235,7 @@ Agentic-VET-VTO-Workforce-Forecasting/
 ├── agents/                       # AI agent definitions
 │   ├── forecast_agent.py
 │   ├── crew.py
-│   ├── risk_agent
+│   ├── risk_agent.py
 │   ├── staffing_agent.py
 │   ├── cost_agent.py
 │   └── executive_agent.py
@@ -218,13 +273,13 @@ Agentic-VET-VTO-Workforce-Forecasting/
 │   ├── vet_vto_policy_notes.txt
 │   └── warehouse_operations_notes.txt
 │
-├── tools/                        # Supporting tools and utilities
+├── tools/                        # Helper utilities used by agents, nodes, and workflow logic
 │
 ├── data/                         # Forecasting data
 │   ├── features.csv
 │   ├── stores.csv
 │   ├── test.csv
-│   └── train,csv
+│   └── train.csv
 │
 ├── models/                       # Saved model artifacts
 │   └── warehouse_system.pkl
@@ -233,10 +288,8 @@ Agentic-VET-VTO-Workforce-Forecasting/
 │
 ├── images/                       # Screenshots and visuals
 │
-└── tools/                        # Helper utilities used by agents, nodes, and workflow logic
-│
 └── test/                         # Test scripts
-    └──test_operational_graph.py
+    └── test_operational_graph.py
 ```
 
 ---
@@ -349,6 +402,20 @@ Examples of guardrail logic include:
 
 ---
 
+## Limitations
+
+This project is a prototype and is not intended for production workforce scheduling without further validation.
+
+Current limitations include:
+
+- Forecast results depend on available historical data
+- Staffing recommendations are simplified for portfolio demonstration purposes
+- Labor rules and site-specific workforce policies are not fully modeled
+- RAG documents are structured as local operational context rather than a production vector database
+- Human review is required before applying any staffing recommendation
+
+---
+
 ## AI Decision-Support Disclaimer
 
 This application is a decision-support prototype.
@@ -362,6 +429,8 @@ It does not replace human operations judgment, workforce management policies, la
 This project demonstrates how traditional forecasting applications can evolve into AI-assisted operational decision systems.
 
 Instead of only showing a forecast chart, the system attempts to answer the more useful business question:
+
+This project demonstrates how warehouse workload forecasting can be extended into an agentic AI system that reasons about staffing decisions, cost impact, operational risk, and executive communication.
 
 > “What should operations do with this forecast?”
 
