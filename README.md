@@ -176,10 +176,11 @@ Agentic-VET-VTO-Workforce-Forecasting/
 ├── crew_runner.py                # Runs the multi-agent workflow
 ├── requirements.txt              # Python dependencies
 ├── scenario_templates.tsv        # Scenario planning templates
-├── railway.json                  # Optional deployment configuration
 │
 ├── agents/                       # AI agent definitions
 │   ├── forecast_agent.py
+│   ├── crew.py
+│   ├── risk_agent
 │   ├── staffing_agent.py
 │   ├── cost_agent.py
 │   └── executive_agent.py
@@ -188,6 +189,7 @@ Agentic-VET-VTO-Workforce-Forecasting/
 │   ├── forecast_task.py
 │   ├── staffing_task.py
 │   ├── cost_task.py
+│   ├── risk_task.py
 │   └── executive_task.py
 │
 ├── graph/                        # Operational workflow graph
@@ -199,27 +201,42 @@ Agentic-VET-VTO-Workforce-Forecasting/
 │   ├── forecast_node.py
 │   ├── staffing_node.py
 │   ├── cost_node.py
+│   ├── rag_node.py
 │   └── executive_node.py
 │
 ├── guardrails/                   # Decision safety checks
 │   └── guardrails.py
 │
 ├── memory/                       # Memory/context management
+│   ├── memory_store.json
 │   └── memory_manager.py
 │
 ├── rag_docs/                     # Operational reference documents
+│   ├── cost_model_assumptions.txt
+│   ├── forecasting_methodology.txt
+│   ├── project_limitations.txt
+│   ├── vet_vto_policy_notes.txt
+│   └── warehouse_operations_notes.txt
 │
 ├── tools/                        # Supporting tools and utilities
 │
 ├── data/                         # Forecasting data
+│   ├── features.csv
+│   ├── stores.csv
+│   ├── test.csv
+│   └── train,csv
 │
 ├── models/                       # Saved model artifacts
+│   └── warehouse_system.pkl
 │
 ├── docs/                         # Documentation
 │
 ├── images/                       # Screenshots and visuals
 │
+└── tools/                        # Helper utilities used by agents, nodes, and workflow logic
+│
 └── test/                         # Test scripts
+    └──test_operational_graph.py
 ```
 
 ---
