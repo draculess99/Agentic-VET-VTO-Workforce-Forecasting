@@ -140,19 +140,40 @@ flowchart LR
 
     Graph --> ForecastNode[Forecast Node]
     Graph --> StaffingNode[Staffing Node]
+    Graph --> RiskNode[Risk Node]
     Graph --> CostNode[Cost Node]
-    Graph --> ExecutiveNode[Executive Node]
+    Graph --> RAGNode[RAG Context Node]
+    Graph --> ExecutiveNode[Executive Summary Node]
+    Graph --> MemoryNode[Operational Memory]
 
     ForecastNode --> Model[Saved Forecasting Model]
     StaffingNode --> Guardrails[Guardrails]
+    RiskNode --> RiskOutput[Operational Risk Assessment]
     CostNode --> Data[Data Inputs]
+    RAGNode --> RAGDocs[RAG Operational Context]
     ExecutiveNode --> Summary[AI Decision Summary]
+    MemoryNode --> MemoryStore[Memory Store]
 
     Agents --> ForecastAgent[Forecast Agent]
     Agents --> StaffingAgent[Staffing Agent]
+    Agents --> RiskAgent[Risk Agent]
     Agents --> CostAgent[Cost Agent]
     Agents --> ExecutiveAgent[Executive Agent]
 
+    Tasks --> ForecastTask[Forecast Task]
+    Tasks --> StaffingTask[Staffing Task]
+    Tasks --> RiskTask[Risk Task]
+    Tasks --> CostTask[Cost Task]
+    Tasks --> ExecutiveTask[Executive Task]
+
+    ForecastNode --> StaffingNode
+    StaffingNode --> RiskNode
+    RiskNode --> CostNode
+    CostNode --> RAGNode
+    RAGNode --> ExecutiveNode
+    ExecutiveNode --> MemoryNode
+
+    RiskOutput --> Summary
     Guardrails --> Output[Safe VET/VTO Recommendation]
 ```
 
@@ -172,6 +193,8 @@ Operational Graph
 Forecast Node
    ↓
 Staffing Node
+   ↓
+Risk Node
    ↓
 Cost Node
    ↓
