@@ -4,6 +4,16 @@
 
 ---
 
+## Live Demo
+
+Try the deployed version of the warehouse workforce forecasting and VET/VTO decision-support application:
+
+- **Live App:** [Open Forecasting App](https://aiworkforceforecastinglaboroptimizationsyst-production.up.railway.app/)
+- **Project Portfolio Page:** [View GitHub Pages Portfolio](https://draculess99.github.io/VET-VTO-Forecasting/)
+- **Source Code:** [View GitHub Repository](https://github.com/draculess99/Agentic-VET-VTO-Workforce-Forecasting/)
+
+---
+
 ## Overview
 
 This project is an advanced agentic AI version of a warehouse workforce forecasting and VET/VTO labor planning application.
