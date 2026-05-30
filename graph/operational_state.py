@@ -60,3 +60,8 @@ class OperationalState(BaseModel):
     # -----------------------------------
 
     executive_summary: str = ""
+
+
+    risk_level: str = ""
+    risk_summary: str = ""
+    risk_recommendation: str = ""
