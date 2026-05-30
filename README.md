@@ -85,6 +85,19 @@ The application rejects unrealistic scenario inputs before running the forecast.
 
 This screenshot shows the application generating a business-facing operational summary using forecast output, staffing logic, risk assessment, estimated labor cost impact, RAG context, and operational memory.
 ![AI Operational Decision Summary](images/ai-operational-decision-summary.png)
+
+### RAG Context Node Output
+
+![RAG Context Node Output](images/rag-context-node-output.png)
+
+This screenshot shows the RAG Context Node retrieving operational reference material, scenario signals, cost assumptions, VET/VTO policy notes, forecasting methodology, and project limitations to support the final AI operational decision summary.
+
+### Advanced Scenario Forecast Dashboard
+
+![Advanced Scenario Forecast Dashboard](images/advanced-scenario-forecast-dashboard.png)
+
+This screenshot shows the advanced weekly scenario mode, where operational drivers such as demand velocity, shipping delay, congestion, logistics stress, labor cost, and economic variables are used to generate forecast output, VET/VTO staffing signals, estimated labor cost impact, confidence scoring, and primary risk-driver identification.
+
 ```
 
 ---
@@ -317,6 +330,10 @@ Agentic-VET-VTO-Workforce-Forecasting/
 ├── docs/                         # Documentation
 │
 ├── images/                       # Screenshots and visuals
+│   ├── guardrail-validation-screenshot.png
+│   ├── advanced-scenario-forecast-dashboard.png
+│   ├── ai-operational-decision-summary.png
+│   └── rag-context-node-output.png
 │
 └── test/                         # Test scripts
     └── test_operational_graph.py
