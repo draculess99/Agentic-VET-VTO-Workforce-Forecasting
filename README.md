@@ -84,7 +84,6 @@ The application rejects unrealistic scenario inputs before running the forecast.
 ![AI Operational Decision Summary](images/ai-operational-decision-summary.png)
 
 This screenshot shows the application generating a business-facing operational summary using forecast output, staffing logic, risk assessment, estimated labor cost impact, RAG context, and operational memory.
-![AI Operational Decision Summary](images/ai-operational-decision-summary.png)
 
 ### RAG Context Node Output
 
