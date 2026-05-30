@@ -201,7 +201,6 @@ flowchart LR
     RiskOutput --> Summary
     Guardrails --> Output[Safe VET/VTO Recommendation]
 ```
-
 ---
 
 ## Workflow Logic
@@ -209,6 +208,7 @@ flowchart LR
 The system follows a structured decision flow:
 
 ```text
+
 Input Data
    ↓
 Forecasting Model
