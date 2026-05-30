@@ -99,7 +99,7 @@ This screenshot shows the RAG Context Node retrieving operational reference mate
 
 ### 5. Guardrail Validation Example
 
-![Guardrail Validation Example](images/guardrail-validation-screenshot.png)
+![Guardrail Validation Example](images/input-guardrail-validation.png)
 
 The application rejects unrealistic scenario inputs before running the forecast, demonstrating that the system includes validation checks before allowing forecast execution.
 
