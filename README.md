@@ -76,9 +76,9 @@ The purpose of this repository is to demonstrate how a traditional forecasting a
 Screenshots of the Streamlit interface, forecast output, scenario stress testing, and AI operational decision summary can be added here.
 
 ```markdown
-![Application Screenshot](images/app_screenshot.png)
-![Application Screenshot](images/app_screenshot.png)
-![Application Screenshot](images/app_screenshot.png)
+![Guardrail validation example](images/guardrail-validation-screenshot.png)
+![AI Operational Decision Summary](images/ai-operational-decision-summary.png)
+![AI Operational Decision Summary](images/ai-operational-decision-summary.png)
 ```
 
 ---
