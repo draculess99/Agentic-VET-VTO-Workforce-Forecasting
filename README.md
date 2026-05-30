@@ -105,7 +105,6 @@ The application rejects unrealistic scenario inputs before running the forecast,
 
 ```
 
----
 ## Model and Data
 
 The forecasting layer uses historical workload and demand-related data to generate future workload estimates.
