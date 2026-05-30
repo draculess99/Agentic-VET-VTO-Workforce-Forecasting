@@ -75,7 +75,7 @@ The purpose of this repository is to demonstrate how a traditional forecasting a
 
 ### Guardrail Validation Example
 
-![Guardrail Validation Example](images/guardrail-validation-screenshot.png)
+![Guardrail Validation Example](images/input-guardrail-validation.png)
 
 The application rejects unrealistic scenario inputs before running the forecast.
 
