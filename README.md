@@ -147,6 +147,8 @@ Summarizes the forecast, staffing recommendation, risk level, and business impac
 
 Checks whether staffing recommendations are operationally reasonable and avoids unrealistic or unsafe recommendations.
 
+```
+
 ---
 
 ## System Architecture
