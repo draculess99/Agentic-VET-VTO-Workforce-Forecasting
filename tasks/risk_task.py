@@ -1,32 +1,35 @@
 from crewai import Task
+from agents.risk_agent import risk_agent
 
-def build_risk_task(
-    peak_week,
-    total_cost,
-    stress_band,
-    primary_risk_display
-):
 
+def build_risk_task():
     return Task(
+        description="""
+        Review the warehouse workforce forecast and staffing recommendation
+        for operational risk.
 
-        description=f"""
-        Analyze warehouse operational risks.
+        Identify risks such as:
+        - workload instability
+        - staffing shortage risk
+        - excessive VET dependency
+        - inappropriate VTO recommendation
+        - peak demand pressure
+        - congestion risk
+        - labor cost stress
+        - fulfillment delay risk
 
-        Forecast Summary:
-        - Peak Week: {peak_week}
-        - Total Labor Cost: ${total_cost:,.0f}
-        - Stress Level: {stress_band}
-        - Primary Risk Driver: {primary_risk_display}
-
-        Evaluate:
-        - operational instability
-        - labor volatility
-        - workforce stress
-        - staffing risk exposure
+        Explain whether the current staffing recommendation appears low risk,
+        medium risk, or high risk from an operations planning perspective.
         """,
 
         expected_output="""
-        Concise operational risk summary
-        in executive business language.
-        """
+        A concise operational risk assessment that includes:
+        - risk level
+        - key risk drivers
+        - staffing concerns
+        - operational warning signs
+        - recommendation for leadership review if needed
+        """,
+
+        agent=risk_agent
     )
