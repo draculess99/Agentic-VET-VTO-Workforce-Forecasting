@@ -73,29 +73,35 @@ The purpose of this repository is to demonstrate how a traditional forecasting a
 
 ## Screenshots
 
-### Guardrail Validation Example
+### 1. Advanced Scenario Forecast Dashboard
 
-![Guardrail Validation Example](images/input-guardrail-validation.png)
+![Advanced Scenario Forecast Dashboard](images/advanced-scenario-forecast-dashboard.png)
 
-The application rejects unrealistic scenario inputs before running the forecast.
+This screenshot shows the advanced weekly scenario mode, where operational drivers such as demand velocity, shipping delay, congestion, logistics stress, labor cost, and economic variables are used to generate forecast output, VET/VTO staffing signals, estimated labor cost impact, confidence scoring, and primary risk-driver identification.
 
-### AI Operational Decision Summary
+### 2. AI Operational Decision Summary
 
 ![AI Operational Decision Summary](images/ai-operational-decision-summary.png)
 
 This screenshot shows the application generating a business-facing operational summary using forecast output, staffing logic, risk assessment, estimated labor cost impact, RAG context, and operational memory.
 
-### RAG Context Node Output
+### 3. Node Workflow State Trace
+
+![Node Workflow State Trace](images/node-workflow-state-trace.png)
+
+This screenshot shows the node workflow state trace used to inspect how the application passes operational data through the forecasting pipeline. It displays the current forecast state, forecast node output, staffing node output, cost node output, and intermediate decision fields such as peak week, stress band, confidence score, primary risk driver, VET weeks, and VTO weeks.
+
+### 4. RAG Context Node Output
 
 ![RAG Context Node Output](images/rag-context-node-output.png)
 
 This screenshot shows the RAG Context Node retrieving operational reference material, scenario signals, cost assumptions, VET/VTO policy notes, forecasting methodology, and project limitations to support the final AI operational decision summary.
 
-### Advanced Scenario Forecast Dashboard
+### 5. Guardrail Validation Example
 
-![Advanced Scenario Forecast Dashboard](images/advanced-scenario-forecast-dashboard.png)
+![Guardrail Validation Example](images/guardrail-validation-screenshot.png)
 
-This screenshot shows the advanced weekly scenario mode, where operational drivers such as demand velocity, shipping delay, congestion, logistics stress, labor cost, and economic variables are used to generate forecast output, VET/VTO staffing signals, estimated labor cost impact, confidence scoring, and primary risk-driver identification.
+The application rejects unrealistic scenario inputs before running the forecast, demonstrating that the system includes validation checks before allowing forecast execution.
 
 ```
 
@@ -332,6 +338,7 @@ Agentic-VET-VTO-Workforce-Forecasting/
 │   ├── guardrail-validation-screenshot.png
 │   ├── advanced-scenario-forecast-dashboard.png
 │   ├── ai-operational-decision-summary.png
+│   ├── node-workflow-state-trace.png
 │   └── rag-context-node-output.png
 │
 └── test/                         # Test scripts
