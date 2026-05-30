@@ -74,6 +74,36 @@ Checks whether staffing recommendations are operationally reasonable and avoids 
 
 ---
 
+## System Architecture
+
+```mermaid
+flowchart LR
+
+    UI[Streamlit App] --> API[Flask API]
+    UI --> Runner[Crew Runner]
+
+    Runner --> Agents[Agents Folder]
+    Runner --> Tasks[Tasks Folder]
+    Runner --> Graph[Operational Graph]
+
+    Graph --> ForecastNode[Forecast Node]
+    Graph --> StaffingNode[Staffing Node]
+    Graph --> CostNode[Cost Node]
+    Graph --> ExecutiveNode[Executive Node]
+
+    ForecastNode --> Model[Saved Forecasting Model]
+    StaffingNode --> Guardrails[Guardrails]
+    CostNode --> Data[Data Inputs]
+    ExecutiveNode --> Summary[AI Decision Summary]
+
+    Agents --> ForecastAgent[Forecast Agent]
+    Agents --> StaffingAgent[Staffing Agent]
+    Agents --> CostAgent[Cost Agent]
+    Agents --> ExecutiveAgent[Executive Agent]
+
+    Guardrails --> Output[Safe VET/VTO Recommendation]
+```
+
 ## Workflow Logic
 
 The system follows a structured decision flow:
