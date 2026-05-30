@@ -15,6 +15,24 @@ def build_executive_task(state):
         "No staffing summary available."
     )
 
+    risk_level = getattr(
+        state,
+        "risk_level",
+        "No risk level available."
+    )
+
+    risk_summary = getattr(
+        state,
+        "risk_summary",
+        "No risk summary available."
+    )
+
+    risk_recommendation = getattr(
+        state,
+        "risk_recommendation",
+        "No risk recommendation available."
+    )
+
     cost_summary = getattr(
         state,
         "cost_summary",
@@ -49,7 +67,7 @@ def build_executive_task(state):
         STRICT GUARDRAILS:
 
         You are an AI operations decision-support assistant for a warehouse workforce forecasting dashboard.      
-        You may only use the forecast summary, staffing summary, cost summary, cost results, retrieved operational context, and historical memory provided in this task.
+        You may only use the forecast summary, staffing summary, operational risk assessment, cost summary, cost results, retrieved operational context, and historical memory provided in this task.
         You must not invent forecast values, labor costs, cost savings, staffing decisions, business causes, company policies, HR rules, or operational facts that are not provided.
         You must not override the VET, VTO, NORMAL, MIXED, or Maintain Staffing recommendation produced by the forecast model, staffing task, or business rule engine.
         You must not describe this as an official Amazon system. 
@@ -68,6 +86,11 @@ def build_executive_task(state):
         
         Staffing Summary:
         {staffing_summary}
+
+        Operational Risk Assessment:
+        - Risk Level: {risk_level}
+        - Risk Summary: {risk_summary}
+        - Risk Recommendation: {risk_recommendation}
         
         Cost Summary:
         {cost_summary}
@@ -86,10 +109,11 @@ def build_executive_task(state):
         
         Include:
         1. Expected demand and labor risk
-        2. VET/VTO/Normal staffing recommendation
-        3. Estimated labor cost impact
-        4. Recommended management action
-        5. Key assumptions and limitations
+        2. Operational risk level and main risk drivers
+        3. VET/VTO/Normal staffing recommendation
+        4. Estimated labor cost impact
+        5. Recommended management action
+        6. Key assumptions and limitations
 
         Do not say staffing should simply be maintained if VET weeks or VTO weeks are present.
         If VET weeks are present, recommend preparing extra labor coverage.
@@ -137,6 +161,8 @@ def build_executive_task(state):
         - do not describe labor cost impact as "savings" unless the input data explicitly says it is savings
         - avoid phrases like "potential labor savings" when only estimated cost impact is provided
         - if discussing VTO, say it may support labor cost control, not guaranteed savings
+        - include the operational risk level if available
+        - do not invent additional risk factors beyond the provided risk assessment
 
         The summary should sound like an enterprise warehouse
         operations intelligence platform used by senior leadership.
