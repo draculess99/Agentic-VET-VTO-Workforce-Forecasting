@@ -24,6 +24,24 @@ The original base project focused on forecasting workload and generating VET/VTO
 
 ---
 
+## Project Summary
+
+This project demonstrates an end-to-end AI decision-support system for workforce planning.
+
+It combines:
+- Machine learning workload forecasting
+- VET/VTO staffing recommendation logic
+- Multi-agent reasoning
+- Guardrail validation
+- RAG-style operational context
+- Cost impact estimation
+- Executive-level business summaries
+- Streamlit and Flask deployment
+
+The goal is not only to predict future workload, but to translate forecasts into operational staffing decisions that a warehouse leader could review and act on.
+
+---
+
 ## Technology Stack
 
 This project uses a multi-agent AI, machine learning, forecasting, and deployment stack.
@@ -91,6 +109,24 @@ The purpose of this repository is to demonstrate how a traditional forecasting a
 
 - Portfolio page for the original base project: https://draculess99.github.io/VET-VTO-Forecasting/
 - Original base GitHub repository: https://github.com/draculess99/VET-VTO-Forecasting
+
+---
+
+## What Makes This Agentic?
+
+The base version produced forecast-driven staffing signals.
+
+This advanced version adds an agentic decision workflow where separate components evaluate the forecast from different operational perspectives:
+
+- Forecast Node: predicts future workload and peak demand
+- Staffing Node: converts forecast output into VET/VTO/Normal recommendations
+- Risk Node: evaluates operational risk and stress level
+- Cost Node: estimates labor cost impact
+- RAG Node: retrieves supporting operational context
+- Executive Node: turns the technical output into a business-facing summary
+- Guardrail Layer: checks for unsafe or unrealistic recommendations
+
+This structure demonstrates how a forecasting model can be extended into a decision-support system rather than remaining only a dashboard.
 
 ---
 
@@ -485,15 +521,13 @@ It does not replace human operations judgment, workforce management policies, la
 
 ## Why This Project Matters
 
-This project demonstrates how traditional forecasting applications can evolve into AI-assisted operational decision systems.
-
-Instead of only showing a forecast chart, the system attempts to answer the more useful business question:
-
-This project demonstrates how warehouse workload forecasting can be extended into an agentic AI system that reasons about staffing decisions, cost impact, operational risk, and executive communication.
+Many forecasting dashboards stop at prediction. This project goes further by asking:
 
 > “What should operations do with this forecast?”
 
-By combining forecasting, agents, guardrails, and executive summaries, this project shows how AI can help translate predictive analytics into practical workforce planning decisions.
+The system translates workload forecasts into staffing recommendations, risk explanations, cost impact estimates, and executive-level summaries.
+
+That makes the project relevant to workforce planning, supply chain analytics, operations analytics, and AI decision-support roles.
 
 ---
 
