@@ -271,22 +271,6 @@ This structure allows the system to move beyond a basic dashboard and act more l
 * Labor cost impact estimation
 * Executive-level AI decision summaries
 
----
-
-## Technology Stack
-
-* Python
-* Streamlit
-* Flask
-* XGBoost / Machine Learning Forecasting
-* CrewAI-style agent structure
-* LangGraph-style workflow logic
-* Pandas
-* Scikit-learn
-* Joblib
-* Guardrails
-* RAG-style document structure
-* GitHub
 
 ---
 
