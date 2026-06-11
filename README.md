@@ -126,7 +126,7 @@ This screenshot shows the RAG Context Node retrieving operational reference mate
 
 The application rejects unrealistic scenario inputs before running the forecast, demonstrating that the system includes validation checks before allowing forecast execution.
 
-```
+---
 
 ## Model and Data
 
@@ -169,8 +169,6 @@ Summarizes the forecast, staffing recommendation, risk level, and business impac
 ### Guardrail Layer
 
 Checks whether staffing recommendations are operationally reasonable and avoids unrealistic or unsafe recommendations.
-
-```
 
 ---
 
